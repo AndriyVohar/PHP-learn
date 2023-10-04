@@ -1,0 +1,62 @@
+{
+    "1": {
+        "code": 1,
+        "author": "\u0413\u0430\u043b\u044c \u041e\u043b\u0435\u043a\u0441\u0430\u043d\u0434\u0440",
+        "estimate": 30000,
+        "scores": {
+            "score1": 4,
+            "score2": 5,
+            "score3": 4
+        }
+    },
+    "2": {
+        "code": 2,
+        "author": "\u0410\u043d\u0434\u0440\u0443\u0441\u0438\u043a \u0412\u0435\u0440\u043e\u043d\u0456\u043a\u0430",
+        "estimate": 25000,
+        "scores": {
+            "score1": 3,
+            "score2": 4,
+            "score3": 4
+        }
+    },
+    "3": {
+        "code": 3,
+        "author": "\u0412\u043e\u0433\u0430\u0440 \u0410\u043d\u0434\u0440\u0456\u0439",
+        "estimate": 50000,
+        "scores": {
+            "score1": 5,
+            "score2": 5,
+            "score3": 4
+        }
+    },
+    "4": {
+        "code": 4,
+        "author": "\u041f\u0456\u0432\u043a\u0430\u0447 \u0412\u0456\u043a\u0442\u043e\u0440",
+        "estimate": 15000,
+        "scores": {
+            "score1": 3,
+            "score2": 2,
+            "score3": 3
+        }
+    },
+    "5": {
+        "code": 5,
+        "author": "\u041d\u043e\u0432\u0456\u043a\u043e\u0432\u0430 \u0420\u0443\u0441\u043b\u0430\u043d\u0430",
+        "estimate": 18000,
+        "scores": {
+            "score1": 3,
+            "score2": 3,
+            "score3": 3
+        }
+    },
+    "6": {
+        "code": "6",
+        "author": "\u041a\u0438\u0440\u0438\u043b\u0435\u043d\u043a\u043e \u042f\u0440\u043e\u0441\u043b\u0430\u0432",
+        "estimate": "75000",
+        "scores": {
+            "score1": "5",
+            "score2": "5",
+            "score3": "5"
+        }
+    }
+}
