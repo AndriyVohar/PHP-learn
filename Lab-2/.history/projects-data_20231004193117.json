@@ -1,0 +1,52 @@
+[
+    1=>[
+        'code'=>1,
+        'author'=>'Галь Олександр',
+        'estimate'=>30000,
+        'scores'=>[
+            'score1'=>4,
+            'score2'=>5,
+            'score3'=>4,
+        ],
+    ],
+    2=>[
+        'code'=>2,
+        'author'=>'Андрусик Вероніка',
+        'estimate'=>25000,
+        'scores'=>[
+            'score1'=>3,
+            'score2'=>4,
+            'score3'=>4,
+        ],
+    ],
+    3=>[
+        'code'=>3,
+        'author'=>'Вогар Андрій',
+        'estimate'=>50000,
+        'scores'=>[
+            'score1'=>5,
+            'score2'=>5,
+            'score3'=>4,
+        ],
+    ],
+    4=>[
+        'code'=>4,
+        'author'=>'Півкач Віктор',
+        'estimate'=>15000,
+        'scores'=>[
+            'score1'=>3,
+            'score2'=>2,
+            'score3'=>3,
+        ],
+    ],
+    5=>[
+        'code'=>5,
+        'author'=>'Новікова Руслана',
+        'estimate'=>18000,
+        'scores'=>[
+            'score1'=>3,
+            'score2'=>3,
+            'score3'=>3,
+        ],
+    ],
+]

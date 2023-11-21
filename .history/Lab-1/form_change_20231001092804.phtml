@@ -1,0 +1,31 @@
+<!-- <?php
+/** @var object $projectToEdit */
+$projectToEdit;
+?>
+
+<center>
+<h2>Форма зміни проєкту</h2>
+<form method="POST">
+    <label>
+        <input type="number" id="code" name="code" value="<?=$projectToEdit['code']?>">
+    </label>
+    <label>
+        <input type="text" id="author" name="author" placeholder="Author (Example: Вогар Андрій)">
+    </label>
+    <label>
+        <input type="number" id="estimate" name="estimate" placeholder="Estimate (Example: 20000)">
+    </label>
+    <button type="submit">Add</button>
+</form>
+</center> -->
+<center>
+<form method="POST">
+    <hr>
+    <p>Форма для редагування інформації про проект за кодом</p>
+
+    <label for="editCodeUser">Код проєкту
+        <input name="editCodeUser" type="text" id="editCodeUser">
+    </label>
+    <button type="submit">Шукати проєкт</button>
+</form>
+</center>
