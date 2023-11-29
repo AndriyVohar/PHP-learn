@@ -11,6 +11,8 @@ use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\Auth\VerifyEmailController;
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\TournamentController;
+
 Route::middleware('guest')->group(function () {
     Route::get('register', [RegisteredUserController::class, 'create'])
                 ->name('register');
@@ -33,6 +35,7 @@ Route::middleware('guest')->group(function () {
 
     Route::post('reset-password', [NewPasswordController::class, 'store'])
                 ->name('password.store');
+
 });
 
 Route::middleware('auth')->group(function () {
@@ -56,4 +59,12 @@ Route::middleware('auth')->group(function () {
 
     Route::post('logout', [AuthenticatedSessionController::class, 'destroy'])
                 ->name('logout');
+
+
+                //Tournaments route
+    Route::get('/tournaments/create', [TournamentController::class, 'create'])->name('tournament.create');
+    Route::post('/tournaments', [TournamentController::class, 'store'])->middleware(['auth', 'verified'])->name('tournaments.store');
+    Route::get('/tournaments/{id}/edit', [TournamentController::class, 'edit'])->where('id', '[0-9]+')->name('tournaments.edit');
+    Route::put('/tournaments/{id}', [TournamentController::class, 'update'])->where('id', '[0-9]+')->name('tournaments.update');
+    Route::delete('/tournaments/{id}', [TournamentController::class, 'destroy'])->where('id', '[0-9]+')->name('tournaments.destroy');
 });

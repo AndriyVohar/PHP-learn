@@ -8,9 +8,13 @@
     <title>Welcome</title>
 </head>
 <body>
-    <h1>Вся таблиця даних</h1>
+    <header style="display: flex">
+        <h1>Вся таблиця даних</h1>
+        <a href="{{route('dashboard')}}" style="margin-left:20vw; font-size:24px;">Profile</a>
+    </header>
+    <br>
     <table border="1">
-        <tr>
+        <tr style="background-color: gray;">
             <td>FullName</td>
             <td>Sex</td>
             <td>Country</td>
@@ -25,9 +29,9 @@
                 <td>{{$tournament->sex}}</td>
                 <td>{{$tournament->country}}</td>
                 <td>{{$tournament->marks}}</td>
-                <td><a href="/tournaments/{{$tournament->id}}">Show</a></td>
-                <td><a href="/tournaments/{{$tournament->id}}/edit">Edit</a></td>
-                <td><a onclick="event.preventDefault(); document.getElementById('delete-form-{{$tournament->id}}').submit();">Delete
+                <td style="background-color: lightyellow"><a href="/tournaments/{{$tournament->id}}">Show</a></td>
+                <td style="background-color: lightsalmon"><a href="/tournaments/{{$tournament->id}}/edit">Edit</a></td>
+                <td style="background-color: silver"><a onclick="event.preventDefault(); document.getElementById('delete-form-{{$tournament->id}}').submit();">Delete
                     <form id="delete-form-{{$tournament->id}}" action="/tournaments/{{$tournament->id}}" method="POST" style="display: none;">
                         @csrf
                         @method('DELETE')
@@ -36,7 +40,8 @@
             </tr>
         @endforeach
     </table>
-    <button><a href="/tournaments/create">Create</a></button>
-
+    <br>
+    <a href="/tournaments/create" style="padding: 10px; background-color: orange;">Create</a>
+    
 </body>
 </html>
