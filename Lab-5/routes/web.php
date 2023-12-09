@@ -32,7 +32,15 @@ Route::middleware('auth')->group(function () {
 });
 //
 // Route::resource('tournaments', TournamentController::class);
-        //Tournaments route
-        Route::get('/tournaments', [TournamentController::class, 'index'])->name('tournaments.index');
-        Route::get('tournaments/{id}', [TournamentController::class, 'show'])->where('id','[0-9]+')->name('tournament.show');
-require __DIR__.'/auth.php';
+//Tournaments route
+Route::get('/tournaments', [TournamentController::class, 'index'])->name('tournaments.index');
+Route::get('tournaments/{id}', [TournamentController::class, 'show'])->where('id', '[0-9]+')->name('tournament.show');
+
+Route::middleware('auth')->group(function(){
+    Route::get('/tournaments/create', [TournamentController::class, 'create'])->name('tournament.create');
+    Route::post('/tournaments', [TournamentController::class, 'store'])->name('tournaments.store');
+    Route::get('/tournaments/{id}/edit', [TournamentController::class, 'edit'])->where('id', '[0-9]+')->name('tournaments.edit');
+    Route::put('/tournaments/{id}', [TournamentController::class, 'update'])->where('id', '[0-9]+')->name('tournaments.update');
+    Route::delete('/tournaments/{id}', [TournamentController::class, 'destroy'])->where('id', '[0-9]+')->name('tournaments.destroy');
+});
+require __DIR__ . '/auth.php';
