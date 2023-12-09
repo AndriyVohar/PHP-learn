@@ -59,12 +59,4 @@ Route::middleware('auth')->group(function () {
 
     Route::post('logout', [AuthenticatedSessionController::class, 'destroy'])
                 ->name('logout');
-
-
-                //Tournaments route
-    Route::get('/tournaments/create', [TournamentController::class, 'create'])->name('tournament.create');
-    Route::post('/tournaments', [TournamentController::class, 'store'])->middleware(['auth', 'verified'])->name('tournaments.store');
-    Route::get('/tournaments/{id}/edit', [TournamentController::class, 'edit'])->where('id', '[0-9]+')->name('tournaments.edit');
-    Route::put('/tournaments/{id}', [TournamentController::class, 'update'])->where('id', '[0-9]+')->name('tournaments.update');
-    Route::delete('/tournaments/{id}', [TournamentController::class, 'destroy'])->where('id', '[0-9]+')->name('tournaments.destroy');
 });
