@@ -49,6 +49,9 @@ class TournamentController extends Controller
     {
         $request->validate([
             'fullName' => 'required|max:255',
+            'sex'=>'required|max:6',
+            'country'=>'required|max:255',
+            'marks'=>'required|max:255'
         ]);
         
         $user = Auth::user();
@@ -65,10 +68,7 @@ class TournamentController extends Controller
     public function edit($id)
     {
         $user = Auth::user();
-        // $this->debug_to_console("Edit");
         $tournament = Tournament::findOrFail($id);
-        // $toConsole = 'User ID: ' . (string) $user->id . ' Tournament creator ID: ' . (string) $tournament->creator_user_id;
-        // $this->debug_to_console($toConsole);
         if (Gate::forUser($user)->allows('edit-tournament', $tournament)) {
             return view('tournaments.edit', ['tournament' => $tournament]);
         } else {
@@ -79,6 +79,9 @@ class TournamentController extends Controller
     {
         $request->validate([
             'fullName' => 'required|max:255',
+            'sex'=>'required|max:6',
+            'country'=>'required|max:255',
+            'marks'=>'required|max:255'
         ]);
         $tournament = Tournament::findOrFail($id);
         $tournament->update($request->all());
