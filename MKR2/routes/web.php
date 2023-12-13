@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ManufacturersController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +17,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/manufacturers', [ManufacturersController::class, 'index']);
+Route::get('/manufacturers/{id}', [ManufacturersController::class, 'show']);
+Route::get('/manufacturers/{id}/edit', [ManufacturersController::class, 'edit']);
+Route::put('/manufacturers/{id}', [ManufacturersController::class, 'update']);
